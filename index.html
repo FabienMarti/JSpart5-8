@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Ex 8</title>
+    </head>
+
+    <body>
+        <form id="node">
+            <label for="surname"></label>
+            <input type="text" id="surname" />
+            <label for="name"></label>
+            <input type="text" id="name" />
+            <input type="submit" value="+" onclick='cloneFunc();' />
+        </form>
+        <div id="nodeArea"></div>
+    </body>
+    <script>
+        function cloneFunc() {
+            var node = document.getElementById('node');
+            var cln = node.cloneNode(true);
+            document.getElementById("nodeArea").appendChild(cln);
+            event.preventDefault();
+        }
+
+    </script>
+
+</html>
